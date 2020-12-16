@@ -5,12 +5,664 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bootstrap Example</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 
 <body>
+    <!-- 32 -->
+    <hr>
+    <!-- <body data-spy="scroll" data-target=".navbar"> -->
+    <!-- Navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <!-- Container -->
+        <div class="container-fluid">
+            <!-- Collapse Icon -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav1">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">MyWebsite</a>
+            </div>
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="nav1">
+                <ul class="nav navbar-nav">
+                    <li><a href="#section1">Link 1</a></li>
+                    <li><a href="#section2">Link 2</a></li>
+                    <li><a href="#section3">Link 3</a></li>
+                    <li><a href="#section4">Link 4</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Content Sections -->
+    <div id="section1" class="container-fluid">
+        <h1>Link 1</h1>
+        <p>Content.</p>
+    </div>
+    <div id="section2" class="container-fluid">
+        <h1>Link 2</h1>
+        <p>Content.</p>
+    </div>
+    <div id="section3" class="container-fluid">
+        <h1>Link 3</h1>
+        <p>Content.</p>
+    </div>
+    <div id="section4" class="container-fluid">
+        <h1>Link 4</h1>
+        <p>Content.</p>
+    </div>
+
+    <!-- 31 -->
+    <hr>
+    <div class="container">
+        <a href="#" data-toggle="popover" title="Test Header" data-content="Sample Paragraph." data-placement="right">Popover</a>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="popover"]').popover();
+        });
+    </script>
+    <!-- 30 -->
+    <hr>
+    <div class="container">
+        <a href="#" data-toggle="tooltip" data-placement="top" title="Insert Tip">Tooltip</a>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+    <!-- 29 -->
+    <hr>
+    <div class="container">
+        <br>
+        <!-- Modal Button -->
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#Modal1">Launch Modal</button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="Modal1">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Header</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Content</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- 28 -->
+    <hr>
+    <div class="container">
+        <br>
+        <div id="carousel" class="carousel slide" data-ride="carousel">
+
+            <!-- Carousel Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel" data-slide-to="1"></li>
+                <li data-target="#carousel" data-slide-to="2"></li>
+                <li data-target="#carousel" data-slide-to="3"></li>
+            </ol>
+
+            <!-- Wrapper for Slides -->
+            <div class="carousel-inner" role="listbox">
+
+                <div class="item active">
+                    <img src="cars/car1.jpg" width="450" height="340">
+                    <div class="carousel-caption">
+                        <h3>Car 1</h3>
+                        <p>Description 1</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="cars/car2.jpg" width="450" height="340">
+                    <div class="carousel-caption">
+                        <h3>Car 2</h3>
+                        <p>Description 2</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="cars/car3.jpg" width="450" height="340">
+                    <div class="carousel-caption">
+                        <h3>Car 3</h3>
+                        <p>Description 3</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="cars/car4.jpg" width="450" height="340">
+                    <div class="carousel-caption">
+                        <h3>Car 4</h3>
+                        <p>Description 4</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Left and Right Control Links -->
+            <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            </a>
+        </div>
+    </div>
+    <!-- 27 -->
+    <hr>
+    <div class="container">
+        <h4>Input Sizing</h4>
+
+        <!-- For Vertical Form Layout -->
+        <form role="form">
+            <div class="form-group">
+                <label for="inp1">Input</label>
+                <input class="form-control input-sm" id="inp1" type="text">
+            </div>
+
+            <div class="form-group">
+                <label for="sel1">Select</label>
+                <select class="form-control input-sm" id="sel1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+            </div>
+
+        </form>
+
+        <hr />
+
+        <!-- For Horizontal Form Layout -->
+        <form class="form-horizontal" role="form">
+            <div class="form-group form-group-lg">
+                <label class="col-sm-2 control-label" for="lg">Large</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="text" id="lg">
+                </div>
+            </div>
+            <div class="form-group form-group-sm">
+                <label class="col-sm-2 control-label" for="sm">Small</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="text" id="sm">
+                </div>
+            </div>
+        </form>
+
+        <hr />
+
+        <!-- Column Sizing -->
+        <div class="col-xs-2">
+            <label for="in1">col-xs-2</label>
+            <input class="form-control" id="in1" type="text">
+        </div>
+        <div class="col-xs-3">
+            <label for="in2">col-xs-3</label>
+            <input class="form-control" id="in2" type="text">
+        </div>
+        <div class="col-xs-6">
+            <label for="in3">col-xs-4</label>
+            <input class="form-control" id="in3" type="text">
+        </div>
+
+    </div>
+    <!-- 26 -->
+    <hr>
+    <div class="container">
+        <h4>Horizontal form: control states</h4>
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <label class="col-sm-2 control-label" for="focused">Focused</label>
+                <div class="col-sm-10">
+                    <input class="form-control" id="focused" type="text" value="Click to Focus">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label" for="disabled">Disabled</label>
+                <div class="col-sm-10">
+                    <input class="form-control" id="disabled" type="text" placeholder="Disabled" disabled>
+                </div>
+            </div>
+            <div class="form-group has-success has-feedback">
+                <label class="col-sm-2 control-label" for="success">Success</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="success">
+                    <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+                </div>
+            </div>
+            <div class="form-group has-warning has-feedback">
+                <label class="col-sm-2 control-label" for="warning">Warning</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="warning">
+                    <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+                </div>
+            </div>
+            <div class="form-group has-error has-feedback">
+                <label class="col-sm-2 control-label" for="error">Error</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="error">
+                    <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- 25 -->
+    <hr>
+    <div class="container">
+        <h4>Form inputs</h4>
+        <form role="form">
+            <!-- Input Fields -->
+            <div class="form-group">
+                <label for="usr">Name:</label>
+                <input type="text" class="form-control" id="usr">
+            </div>
+            <!-- Text Area -->
+            <div class="form-group">
+                <label for="comment">Comment:</label>
+                <textarea class="form-control" rows="5" id="comment"></textarea>
+            </div>
+            <!-- Check Boxes -->
+            <div class="checkbox">
+                <label><input type="checkbox" value="">Option 1</label>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" value="">Option 2</label>
+            </div>
+            <!-- Radio Buttons -->
+            <div class="radio">
+                <label><input type="radio" name="optradio">Option 1</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="optradio">Option 2</label>
+            </div>
+            <!-- Select Menu -->
+            <div class="form-group">
+                <label for="sel">Select list:</label>
+                <select class="form-control" id="sel">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+            </div>
+            <!-- Multiple Select Menu -->
+            <div class="form-group">
+                <label for="msel">Mutiple select list:</label>
+                <select multiple class="form-control" id="msel">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+        </form>
+    </div>
+    <!-- 24 -->
+    <hr>
+    <div class="container">
+        <h4>Form:</h4>
+        <!-- <form role="form"> -->
+        <form class="form-inline" role="form">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox"> Remember me</label>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
+    <!-- 23 -->
+    <hr>
+    <nav class="navbar navbar-default">
+        <!-- <nav class="navbar navbar-default navbar-fixed-top"> -->
+        <!-- <nav class="navbar navbar-inverse navbar-fixed-bottom"> -->
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">MyWebsite</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-star-empty"></span> RLink 1</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-search"></span> RLink 2</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <div class="container">
+        <h3>Heading</h3>
+        <p>Content.</p>
+    </div>
+    <!-- 22 -->
+    <hr>
+    <div class="container">
+        <h4>Pill Menu</h4>
+        <ul class="nav nav-pills">
+            <li class="active"><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+        </ul>
+        <hr />
+        <!-- Pill Menu with Dropdown -->
+        <ul class="nav nav-pills nav-stacked">
+            <li class="active"><a href="#">Link 1</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Link 2
+                    <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Sub Link 1</a></li>
+                    <li><a href="#">Sub Link 2</a></li>
+                    <li><a href="#">Sub Link 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+        </ul>
+    </div>
+    <!-- 21 -->
+    <hr>
+    <div class="container">
+        <h4>Inline List Menu</h4>
+        <ul class="list-inline">
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+        </ul>
+    </div>
+
+    <hr />
+    <!-- Tab Menu with Drop Down -->
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#">Link 1</a></li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Link 2 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Sub Link 1</a></li>
+                <li><a href="#">Sub Link 2</a></li>
+                <li><a href="#">Sub Link 3</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Link 3</a></li>
+        <li><a href="#">Link 4</a></li>
+    </ul>
+    <!-- 20 -->
+    <hr>
+    <div class="container">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#ex1">Heading 1</a>
+                    </h4>
+                </div>
+                <div id="ex1" class="panel-collapse collapse in">
+                    <div class="panel-body">Sample Content.</div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#ex2">Heading 2</a>
+                    </h4>
+                </div>
+                <div id="ex2" class="panel-collapse collapse in">
+                    <div class="panel-body">Sample Content.</div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#ex3">Heading 3</a>
+                    </h4>
+                </div>
+                <div id="ex3" class="panel-collapse collapse in">
+                    <div class="panel-body">Sample Content.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 19 -->
+    <hr>
+    <div class="container">
+        <br>
+        <div class="panel-group">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#expand">Collapse</a>
+                    </h4>
+                </div>
+                <div id="expand" class="panel-collapse collapse">
+                    <ul class="list-group">
+                        <li class="list-group-item">Item 1</li>
+                        <li class="list-group-item">Item 2</li>
+                        <li class="list-group-item">Item 3</li>
+                    </ul>
+                    <div class="panel-footer">Footer</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 18 -->
+    <hr>
+    <div class="container">
+        <br>
+        <div class="panel-group">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#expand">Collapsible panel</a>
+                    </h4>
+                </div>
+                <div id="expand" class="panel-collapse collapse">
+                    <div class="panel-body">Panel Body</div>
+                    <div class="panel-footer">Panel Footer</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 17 -->
+    <hr>
+    <div class="container">
+        <br>
+        <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#ex1">Collapse</button>
+        <div id="ex1" class="collapse">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+            with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </div>
+        <hr />
+        <a href="#ex2" class="btn btn-info" data-toggle="collapse">Simple collapsible</a>
+        <div id="ex2" class="collapse">
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their
+            infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+        </div>
+    </div>
+    <!-- 16 -->
+    <hr>
+    <div class="container">
+        <h4>Dropdown Menu</h4>
+        <div class="dropdown">
+            <!-- <div class="dropup"> -->
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Menu
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li class="dropdown-header"><a href="#">Header 1</a></li>
+                <li><a href="#">Option 1</a></li>
+                <li class="disabled"><a href="#">Option 2</a></li>
+                <li><a href="#">Option 3</a></li>
+                <li><a href="#">Option 4</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header"><a href="#">Header 2</a></li>
+                <li><a href="#">Option 5</a></li>
+                <li><a href="#">Option 6</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 15 -->
+    <hr>
+    <div class="container">
+        <h4>Panel</h4>
+        <!-- Basic Panel -->
+        <div class="panel panel-default">
+            <div class="panel-heading">Sample Text Content.</div>
+            <div class="panel-body">Sample Text Content.</div>
+            <div class="panel-footer">Sample Text Content.</div>
+        </div>
+        <!-- Panel Group -->
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">Panel Header</div>
+                <div class="panel-body">Panel Content</div>
+            </div>
+            <div class="panel panel-success">
+                <div class="panel-heading">Panel Header</div>
+                <div class="panel-body">Panel Content</div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">Panel Header</div>
+                <div class="panel-body">Panel Content</div>
+            </div>
+        </div>
+    </div>
+    <!-- 14 -->
+    <hr>
+    <div class="container">
+        <h4>Basic List Group</h4>
+
+        <ul class="list-group">
+            <li class="list-group-item"> <span class="badge">12</span> Item 1</li>
+            <li class="list-group-item list-group-item-success">Item 1</li>
+            <li class="list-group-item active">Item 1</li>
+            <li class="list-group-item disabled">Item 1</li>
+            <li class="list-group-item">
+                <h4 class="list-group-item-heading">Heading</h4>
+            </li>
+        </ul>
+
+        <ul class="list-group">
+            <a class="list-group-item">Item 1</a>
+            <a class="list-group-item">Item 1</a>
+            <a class="list-group-item">Item 1</a>
+        </ul>
+    </div>
+    <!-- 13 -->
+    <hr>
+    <div class="container">
+        <h4>Pager</h4>
+        <ul class="pager">
+            <li class="previous"><a href="#">Previous</a></li>
+            <li class="next"><a href="#">Next</a></li>
+        </ul>
+
+        <ul class="pager">
+            <li><a href="#">Previous</a></li>
+            <li><a href="#">Next</a></li>
+        </ul>
+    </div>
+    <!-- 12 -->
+    <hr>
+    <div class="container">
+        <h4>Pagination</h4>
+        <p> Page Content... </p>
+        <!-- <ul class="pagination"> -->
+        <ul class="breadcrumb">
+            <!-- <ul class="pagination pagination-lg"> -->
+            <li><a href="#">1</a></li>
+            <li class="active"><a href="#">2</a></li>
+            <li class="disabled"><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+        </ul>
+    </div>
+    <!-- 11 -->
+    <hr>
+    <div class="container">
+        <h4>Progress Bar</h4>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width:80%">
+                80%
+            </div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" style="width:80%">
+                80%
+            </div>
+        </div>
+    </div>
+    <!-- 10 -->
+    <hr>
+    <div class="container">
+        <h4>Badges</h4>
+        <a href="#">Members <span class="badge">8</span></a><br>
+        <a href="#">Messages <span class="badge">5</span></a><br>
+        <a href="#">New Users <span class="badge">7</span></a>
+        <hr />
+        <button type="button" class="btn btn-primary">Primary <span class="badge">10</span></button>
+        <hr />
+        <h1>Example <span class="label label-primary">New</span></h1>
+        <h2>Example <span class="label label-warning">New</span></h2>
+        <h3>Example <span class="label label-danger">New</span></h3>
+        <h4>Example <span class="label label-info">New</span></h4>
+        <hr />
+        <span class="label label-default">Default</span>
+        <span class="label label-primary">Primary</span>
+        <span class="label label-success">Success</span>
+        <span class="label label-info">Info</span>
+        <span class="label label-warning">Warning</span>
+        <span class="label label-danger">Danger</span>
+    </div>
+    <!-- 9 -->
+    <hr>
+    <div class="container">
+        <h2>Glyphicons</h2>
+        <p>Envelope: <span class="glyphicon glyphicon-envelope"></span></p>
+        <p>Search: <span class="glyphicon glyphicon-search"></span></p>
+        <p>Heart: <span class="glyphicon glyphicon-heart"></span></p>
+        <p>Star: <span class="glyphicon glyphicon-star-empty"></span></p>
+        <button type="button" class="btn btn-default"> <span class="glyphicon glyphicon-search"></span> Search </button>
+        <button type="button" class="btn btn-warning">
+            <span class="glyphicon glyphicon-search"></span> Search
+        </button>
+        <p>Print: <span class="glyphicon glyphicon-print"></span></p>
+        <a href="#" class="btn btn-success btn-lg">
+            <span class="glyphicon glyphicon-print"></span> Print
+        </a>
+    </div>
     <!-- 8 -->
     <hr>
     <div class="container">
@@ -222,5 +874,7 @@
         <p class="bg-danger">Danger Text.</p>
     </div>
 </body>
+
+
 
 </html>

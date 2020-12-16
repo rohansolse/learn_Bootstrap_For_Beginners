@@ -1,0 +1,15 @@
+
+/* 28 */
+.carousel-inner > .item > img {
+    width: 100%;
+    margin: auto;
+}
+
+/* 32 */
+body {
+    position: relative;
+}
+#section1 {padding-top:45px;height:500px; background-color: cyan;}
+#section2 {padding-top:45px;height:500px; background-color: yellow;}
+#section3 {padding-top:45px;height:500px; background-color: pink;}
+#section4 {padding-top:45px;height:500px; background-color: magenta;}
